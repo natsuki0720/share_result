@@ -1,189 +1,167 @@
 <!doctype html>
-<html lang="en">
+<html lang="ja">
 <head>
-  <meta charset="utf-8"/>
-  <meta name="viewport" content="width=device-width,initial-scale=1"/>
-  <title>Pages (EN / JA)</title>
+  <meta charset="utf-8" />
+  <meta name="viewport" content="width=device-width,initial-scale=1" />
+  <title>Result Index (EN | JA)</title>
   <style>
-    :root{--bg:#0b0c0f;--card:#12141a;--muted:#9aa4b2;--text:#e6e9ef;--border:#1e2230}
-    *{box-sizing:border-box} html,body{height:100%}
-    body{margin:0;background:var(--bg);color:var(--text);font:14px/1.6 system-ui,-apple-system,Segoe UI,Roboto,Noto Sans,'Yu Gothic UI',sans-serif}
-    .container{max-width:1200px;margin:24px auto;padding:0 16px}
-    .header{display:flex;align-items:center;gap:12px;justify-content:space-between;flex-wrap:wrap;margin-bottom:12px}
-    .title{font-size:18px;font-weight:800;letter-spacing:.2px}
-    .muted{color:var(--muted)}
-    .grid{display:grid;grid-template-columns:1fr 1fr;gap:16px}
-    .card{background:var(--card);border:1px solid var(--border);border-radius:16px;padding:14px;min-height:60vh}
-    h2{margin:0 0 8px;font-size:16px}
-    details{margin:8px 0;border:1px solid #1b2030;border-radius:10px;overflow:hidden}
-    summary{cursor:pointer;padding:8px 10px;background:#0f1218;border-bottom:1px solid #181c28}
-    ul{list-style:none;margin:0;padding:8px 10px;display:grid;grid-template-columns:repeat(auto-fill,minmax(180px,1fr));gap:6px}
-    a{color:#9fd1ff;text-decoration:none} a:hover{text-decoration:underline}
-    .controls{display:flex;gap:8px;align-items:center}
-    .pill{display:inline-block;padding:4px 10px;border-radius:999px;border:1px solid #2a3240;background:#1a1f29;font-weight:700;font-size:12px;color:var(--text);text-decoration:none}
-    .small{font-size:12px}
-    @media (max-width:960px){.grid{grid-template-columns:1fr}}
+    :root{
+      --bg:#0b0c10; --panel:#14161c; --panel-2:#1a1d24;
+      --text:#eef2ff; --muted:#9aa3b2; --accent:#7aa2ff; --border:#2a2f3a;
+      --gap:16px; --maxw:1200px;
+    }
+    *{box-sizing:border-box}
+    html,body{height:100%}
+    body{
+      margin:0; font-family:system-ui,-apple-system,Segoe UI,Roboto,
+      "Hiragino Kaku Gothic ProN",Meiryo,sans-serif;
+      background:var(--bg); color:var(--text);
+    }
+    header{
+      position:sticky; top:0; z-index:10;
+      background:linear-gradient(180deg,var(--panel),rgba(20,22,28,.7));
+      backdrop-filter: blur(6px);
+      border-bottom:1px solid var(--border);
+      padding:16px;
+    }
+    h1{margin:0 0 6px; font-size:20px; font-weight:700}
+    .hint{color:var(--muted); font-size:12px}
+    main{max-width:var(--maxw); margin:0 auto; padding:16px}
+    .grid{display:grid; grid-template-columns:1fr 1fr; gap:var(--gap)}
+    .col{
+      background:var(--panel);
+      border:1px solid var(--border);
+      border-radius:14px; padding:14px;
+      box-shadow:0 10px 24px rgba(0,0,0,.25) inset;
+      min-height:120px;
+    }
+    .col h2{margin:0 0 10px; font-size:16px; display:flex; gap:8px; align-items:center}
+    .badge{display:inline-block; font-size:11px; padding:2px 8px; border-radius:999px;
+      background:var(--panel-2); color:var(--muted); border:1px solid var(--border);}
+    details{
+      background:var(--panel-2);
+      border:1px solid var(--border);
+      border-radius:10px; padding:8px 10px; margin:8px 0;
+    }
+    summary{cursor:pointer; font-weight:700}
+    ul{margin:8px 0 0 18px; padding:0; list-style:disc}
+    a{
+      color:var(--text); text-decoration:none; border-bottom:1px dashed rgba(122,162,255,.35);
+    }
+    a:hover{color:var(--accent); border-bottom-color:var(--accent)}
+    .muted{color:var(--muted); font-size:12px}
+    .err{color:#ff6b7a}
+    footer{color:var(--muted); font-size:12px; text-align:center; padding:20px}
+    @media (max-width: 800px){ .grid{grid-template-columns:1fr} }
   </style>
 </head>
 <body>
-<div class="container">
-  <div class="header">
-    <div class="title">Generated Pages (EN / JA)</div>
-    <div class="controls small">
-      <span class="muted">Index of:</span>
-      <code>result/result_en/html</code> & <code>result/result_ja/html</code>
-      <a class="pill" href="./">Reload</a>
+  <header>
+    <h1>Result Index <span class="muted">from <code>result/index.json</code></span></h1>
+    <div class="hint">英語（左）／日本語（右）の一覧を <code>result/index.json</code> から生成します。</div>
+  </header>
+
+  <main>
+    <div class="grid">
+      <section class="col" id="col-en" aria-labelledby="h-en">
+        <h2 id="h-en">English <span class="badge" id="count-en">0</span></h2>
+        <div id="list-en" class="list"></div>
+      </section>
+      <section class="col" id="col-ja" aria-labelledby="h-ja">
+        <h2 id="h-ja">日本語 <span class="badge" id="count-ja">0</span></h2>
+        <div id="list-ja" class="list"></div>
+      </section>
     </div>
-  </div>
+  </main>
 
-  <div class="grid">
-    <!-- EN column -->
-    <section class="card">
-      <h2>English</h2>
-      <div id="en-status" class="small muted">Scanning…</div>
-      <div id="en-root"></div>
-    </section>
+  <footer>
+    Links are built as <code>result/</code> + <code>relpath</code> from <code>index.json</code>.
+  </footer>
 
-    <!-- JA column -->
-    <section class="card">
-      <h2>日本語</h2>
-      <div id="ja-status" class="small muted">Scanning…</div>
-      <div id="ja-root"></div>
-    </section>
-  </div>
-
-  <p class="small muted" style="margin-top:10px">
-    ※ 動的探索は「video と case の規則名」を決め打ちで HEAD リクエストし、存在したものだけを表示します。
-  </p>
-</div>
-
-<script>
-/**
- * 設定：video の範囲と case の上限（必要に応じて調整）
- * 例：video1..3、case1..200 を探索
- */
-const VIDEOS   = [1, 2, 3];
-const CASE_MAX = 50;
-
-// ルート（index.html からの相対パス）
-const EN_BASE = "result/result_en/html";
-const JA_BASE = "result/result_ja/html";
-
-// HEAD が使えない場合に GET をフォールバック（GitHub Pages は通常 HEAD OK）
-async function exists(url) {
-  try {
-    let res = await fetch(url, { method: "HEAD", cache: "no-store" });
-    if (res.ok) return true;
-    // 一部環境で HEAD が 403 などになるケースのフォールバック
-    res = await fetch(url, { method: "GET", cache: "no-store" });
-    return res.ok;
-  } catch (e) {
-    return false;
-  }
-}
-
-// 過負荷防止：同時並列を抑える簡易キュー
-async function pMapLimit(items, limit, mapper) {
-  const ret = [];
-  const executing = [];
-  for (const item of items) {
-    const p = Promise.resolve().then(() => mapper(item));
-    ret.push(p);
-    if (limit <= items.length) {
-      const e = p.then(() => executing.splice(executing.indexOf(e), 1));
-      executing.push(e);
-      if (executing.length >= limit) {
-        await Promise.race(executing);
+  <script>
+    // 1) index.json を result/ 優先で探す（なければ同階層をフォールバック）
+    async function loadIndexJSON() {
+      const candidates = ["result/index.json", "./result/index.json", "index.json", "./index.json"];
+      let lastErr = null;
+      for (const url of candidates) {
+        try {
+          const res = await fetch(url, { cache: "no-store" });
+          if (!res.ok) throw new Error(`${res.status} ${res.statusText}`);
+          console.log("[index.json] loaded:", url);
+          return await res.json();
+        } catch (e) {
+          console.warn("[index.json] failed:", url, e);
+          lastErr = e;
+        }
       }
+      throw lastErr ?? new Error("index.json not found");
     }
-  }
-  return Promise.all(ret);
-}
 
-// videoX / caseY を列挙して存在チェック
-async function scanLang(baseRoot) {
-  const results = new Map(); // key: video, val: [{label, href}]
-  const tasks = [];
-
-  for (const v of VIDEOS) {
-    results.set(v, []);
-    for (let c = 1; c <= CASE_MAX; c++) {
-      const href = `${baseRoot}/video${v}/case${c}.html`;
-      tasks.push({ v, c, href });
+    // 2) JSONの relpath に "result/" を前置（既に "result/" 始まりならそのまま）
+    function ensureHref(relpath) {
+      if (!relpath) return "#";
+      return relpath.startsWith("result/") ? relpath : `result/${relpath}`;
     }
-  }
 
-  // 並列 12 本くらいで十分（必要なら増減）
-  await pMapLimit(tasks, 12, async ({ v, c, href }) => {
-    if (await exists(href)) {
-      results.get(v).push({ label: `video${v}/case${c}`, href });
-    }
-  });
+    // 3) 各言語のブロックを描画
+    function render(container, map) {
+      container.innerHTML = "";
+      let total = 0;
+      const vids = Object.keys(map || {}).sort((a,b)=>Number(a)-Number(b));
+      for (const v of vids) {
+        const items = map[v] || [];
+        if (!items.length) continue;
+        total += items.length;
 
-  return results;
-}
+        const det = document.createElement("details");
+        const sum = document.createElement("summary");
+        sum.textContent = `video${v} (${items.length})`;
+        det.appendChild(sum);
 
-function renderResults(container, results) {
-  container.innerHTML = "";
-  let foundAny = false;
-
-  for (const v of VIDEOS) {
-    const items = results.get(v) || [];
-    const open = items.length <= 30; // 少ない video は最初から展開
-    const details = document.createElement("details");
-    if (open) details.open = true;
-    const summary = document.createElement("summary");
-    summary.textContent = `video${v} (${items.length})`;
-    details.appendChild(summary);
-
-    const ul = document.createElement("ul");
-    if (items.length === 0) {
-      const li = document.createElement("li");
-      li.className = "muted";
-      li.textContent = "No cases";
-      ul.appendChild(li);
-    } else {
-      foundAny = true;
-      for (const it of items) {
-        const li = document.createElement("li");
-        const a = document.createElement("a");
-        a.href = it.href;
-        a.textContent = it.label;
-        li.appendChild(a);
-        ul.appendChild(li);
+        const ul = document.createElement("ul");
+        for (const it of items) {
+          const li = document.createElement("li");
+          const a = document.createElement("a");
+          a.href = ensureHref(it.relpath);
+          a.target = "_blank";
+          a.rel = "noopener";
+          a.textContent = `case${it.case}`;
+          li.appendChild(a);
+          ul.appendChild(li);
+        }
+        det.appendChild(ul);
+        container.appendChild(det);
       }
+      return total;
     }
-    details.appendChild(ul);
-    container.appendChild(details);
-  }
 
-  return foundAny;
-}
+    // 4) 実行
+    (async () => {
+      try {
+        const idx = await loadIndexJSON();                    // ← result/index.json のスキーマ前提
+        const en = idx?.videos?.en ?? {};
+        const ja = idx?.videos?.ja ?? {};
 
-(async () => {
-  const enRoot   = document.getElementById("en-root");
-  const jaRoot   = document.getElementById("ja-root");
-  const enStatus = document.getElementById("en-status");
-  const jaStatus = document.getElementById("ja-status");
+        const enTotal = render(document.getElementById("list-en"), en);
+        const jaTotal = render(document.getElementById("list-ja"), ja);
 
-  // 英語
-  try {
-    const enResults = await scanLang(EN_BASE);
-    const ok = renderResults(enRoot, enResults);
-    enStatus.textContent = ok ? "Done." : "No pages found.";
-  } catch (e) {
-    enStatus.textContent = "Error while scanning.";
-  }
+        document.getElementById("count-en").textContent = String(idx?.counts?.en ?? enTotal);
+        document.getElementById("count-ja").textContent = String(idx?.counts?.ja ?? jaTotal);
 
-  // 日本語
-  try {
-    const jaResults = await scanLang(JA_BASE);
-    const ok = renderResults(jaRoot, jaResults);
-    jaStatus.textContent = ok ? "完了" : "ページが見つかりませんでした";
-  } catch (e) {
-    jaStatus.textContent = "探索中にエラーが発生しました";
-  }
-})();
-</script>
+        if (!enTotal) document.getElementById("list-en").innerHTML = `<p class="muted">英語ページが見つかりませんでした。</p>`;
+        if (!jaTotal) document.getElementById("list-ja").innerHTML = `<p class="muted">日本語ページが見つかりませんでした。</p>`;
+      } catch (e) {
+        console.error(e);
+        for (const key of ["en","ja"]) {
+          const box = document.getElementById(`list-${key}`);
+          const p = document.createElement("p");
+          p.className = "err";
+          p.textContent = "index.json の読み込みに失敗しました（配置やパスを確認してください）。";
+          box.appendChild(p);
+        }
+      }
+    })();
+  </script>
+  
 </body>
 </html>
