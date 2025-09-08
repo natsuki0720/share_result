@@ -1,0 +1,53 @@
+{
+  "images_path": "photos/video1/case3",
+  "road_image_analysis": {
+    "traffic_function": {
+      "lanes": 2,
+      "traffic_signals": "present",
+      "sign_types": [
+        "speed limit",
+        "commercial",
+        "bus stop"
+      ],
+      "intersection_types": [
+        "cross intersection"
+      ],
+      "vehicle_types": [
+        "passenger car",
+        "truck",
+        "bus",
+        "motorcycle"
+      ],
+      "congestion_level": "moderate"
+    },
+    "pedestrians_cyclists": {
+      "sidewalks": "present",
+      "crosswalks": "present",
+      "pedestrian_profile": "many school children"
+    },
+    "safety_disaster": {
+      "guardrails": "present",
+      "street_lighting": "present",
+      "disaster_prevention_signs": "absent",
+      "shoulder_pullouts": "absent"
+    },
+    "environment": {
+      "commercial_facilities": "present",
+      "schools": "present",
+      "green_space": "present",
+      "building_height": "mid-rise"
+    },
+    "comfort": {
+      "greenery_cover": "present",
+      "benches": "absent",
+      "wayfinding_signs": "absent",
+      "monuments": "absent"
+    },
+    "deterioration": {
+      "pavement_marking_visibility": "clear",
+      "litter": "absent",
+      "pavement_damage": "none"
+    }
+  },
+  "free_description": "This road section is designed as a mixed-use urban thoroughfare, primarily serving drivers and local residents, including school children. Its intent is to facilitate vehicular movement while accommodating pedestrian activity for accessing adjacent commercial and educational facilities. Mobility efficiency is moderate for drivers, supported by two lanes and traffic signals, but can be impacted by on-street parking and intersections. Safety features include sidewalks, crosswalks, and guardrails, though the absence of dedicated pedestrian wayfinding signs and benches suggests a primary focus on transit rather than leisurely strolling. The presence of schools and commercial establishments indicates a vibrant local environment. Pavement markings are generally clear, and the area appears well-maintained regarding litter and pavement damage. The overall functionality aligns with its role as a local artery connecting residential areas with amenities, balancing vehicular flow with essential pedestrian access, albeit with limited dedicated comfort elements for pedestrians."
+}

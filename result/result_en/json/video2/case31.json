@@ -1,0 +1,49 @@
+{
+  "images_path": "photos/video2/case31",
+  "road_image_analysis": {
+    "traffic_function": {
+      "lanes": 1,
+      "traffic_signals": "absent",
+      "sign_types": [
+        "regulatory signs",
+        "warning signs"
+      ],
+      "intersection_types": [
+        "T-intersection"
+      ],
+      "vehicle_types": [
+        "passenger car"
+      ],
+      "congestion_level": "light"
+    },
+    "pedestrians_cyclists": {
+      "sidewalks": "absent",
+      "crosswalks": "absent",
+      "pedestrian_profile": "unknown"
+    },
+    "safety_disaster": {
+      "guardrails": "present",
+      "street_lighting": "present",
+      "disaster_prevention_signs": "absent",
+      "shoulder_pullouts": "absent"
+    },
+    "environment": {
+      "commercial_facilities": "absent",
+      "schools": "absent",
+      "green_space": "present",
+      "building_height": "low-rise"
+    },
+    "comfort": {
+      "greenery_cover": "present",
+      "benches": "absent",
+      "wayfinding_signs": "absent",
+      "monuments": "absent"
+    },
+    "deterioration": {
+      "pavement_marking_visibility": "clear",
+      "litter": "absent",
+      "pavement_damage": "none"
+    }
+  },
+  "free_description": "This road section is designed as a local access route for a residential area, primarily serving drivers and residents. Its narrow, single-lane configuration, often further restricted by parked vehicles, ensures low-speed local mobility. While guardrails enhance safety along the embankment, the notable absence of dedicated sidewalks and crosswalks presents a significant safety weakness for pedestrians, who are compelled to share the roadway. Traffic signs like \"Stop\" and \"Speed\" markings are appropriate interventions to manage vehicle speed. Abundant greenery contributes to visual comfort, though overhead utility lines introduce clutter. The road effectively fulfills its role for vehicular access. However, the lack of pedestrian infrastructure creates a functional misalignment, as it fails to adequately support the safety and comfort of residents who must walk. No prominent cultural or social value beyond its everyday utility is apparent."
+}

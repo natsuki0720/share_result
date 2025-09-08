@@ -1,0 +1,54 @@
+{
+  "images_path": "photos/video2/case9",
+  "road_image_analysis": {
+    "traffic_function": {
+      "lanes": 2,
+      "traffic_signals": "present",
+      "sign_types": [
+        "no stopping",
+        "pedestrian crossing",
+        "bus stop",
+        "street name sign",
+        "commercial signs"
+      ],
+      "intersection_types": [
+        "cross intersection"
+      ],
+      "vehicle_types": [
+        "passenger car",
+        "truck",
+        "bicycle"
+      ],
+      "congestion_level": "light"
+    },
+    "pedestrians_cyclists": {
+      "sidewalks": "present",
+      "crosswalks": "present",
+      "pedestrian_profile": "commuters"
+    },
+    "safety_disaster": {
+      "guardrails": "absent",
+      "street_lighting": "present",
+      "disaster_prevention_signs": "absent",
+      "shoulder_pullouts": "absent"
+    },
+    "environment": {
+      "commercial_facilities": "present",
+      "schools": "absent",
+      "green_space": "present",
+      "building_height": "mid-rise"
+    },
+    "comfort": {
+      "greenery_cover": "present",
+      "benches": "present",
+      "wayfinding_signs": "present",
+      "monuments": "absent"
+    },
+    "deterioration": {
+      "pavement_marking_visibility": "clear",
+      "litter": "absent",
+      "pavement_damage": "none"
+    }
+  },
+  "free_description": "This road section functions as a local arterial, prioritizing vehicular and public transport flow while accommodating pedestrians and cyclists in a mixed residential and commercial area. Mobility is efficient for drivers, and pedestrians benefit from well-defined sidewalks, crosswalks, and bus stops with benches, enhancing safety and comfort. Cyclists are integrated, but without fully separated infrastructure. Strengths include good pavement, clear markings, and street lighting. Greenery from trees improves visual appeal. However, the dense overhead utility lines detract significantly from visual comfort. The road effectively fulfills its role as a community thoroughfare, supporting daily commutes and local access. Its social value lies in facilitating the daily life and routines of residents and commuters."
+}

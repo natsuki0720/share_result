@@ -1,0 +1,52 @@
+{
+  "images_path": "photos/video2/case7",
+  "road_image_analysis": {
+    "traffic_function": {
+      "lanes": 2,
+      "traffic_signals": "present",
+      "sign_types": [
+        "warning signs",
+        "informational signs"
+      ],
+      "intersection_types": [
+        "cross intersection"
+      ],
+      "vehicle_types": [
+        "passenger car",
+        "truck",
+        "bus",
+        "logistics vehicle"
+      ],
+      "congestion_level": "light"
+    },
+    "pedestrians_cyclists": {
+      "sidewalks": "present",
+      "crosswalks": "present",
+      "pedestrian_profile": "many school children"
+    },
+    "safety_disaster": {
+      "guardrails": "present",
+      "street_lighting": "present",
+      "disaster_prevention_signs": "absent",
+      "shoulder_pullouts": "absent"
+    },
+    "environment": {
+      "commercial_facilities": "present",
+      "schools": "present",
+      "green_space": "present",
+      "building_height": "mid-rise"
+    },
+    "comfort": {
+      "greenery_cover": "present",
+      "benches": "absent",
+      "wayfinding_signs": "present",
+      "monuments": "absent"
+    },
+    "deterioration": {
+      "pavement_marking_visibility": "clear",
+      "litter": "absent",
+      "pavement_damage": "none"
+    }
+  },
+  "free_description": "This road section functions as a local arterial, integrating residential and commercial activities, primarily serving residents, local drivers, and public transport users, with a strong emphasis on pedestrian safety, especially for school children. Its structural characteristics offer good mobility efficiency for local vehicular traffic and buses. Safety is enhanced by clear sidewalks, crosswalks, guardrails, and explicit school zone signage, though overhead utility lines present a visual clutter. Comfort is significantly boosted by abundant, well-maintained street trees and hedges, providing a pleasant visual and environmental quality. These green elements are appropriately placed and fulfill their aesthetic and ecological roles without obstructing functionality. The space demonstrates good alignment between its design intent\n\nbalancing local access, safety, and amenity\n\nand its real-world function, effectively supporting daily community life. The consistent greenery fosters a distinct local character, contributing to residents' attachment and the area's social value."
+}

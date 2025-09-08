@@ -1,0 +1,52 @@
+{
+  "images_path": "photos/video2/case4",
+  "road_image_analysis": {
+    "traffic_function": {
+      "lanes": 2,
+      "traffic_signals": "present",
+      "sign_types": [
+        "speed limit",
+        "no parking",
+        "bus stop",
+        "direction sign"
+      ],
+      "intersection_types": [
+        "cross intersection"
+      ],
+      "vehicle_types": [
+        "passenger car",
+        "logistics vehicle"
+      ],
+      "congestion_level": "light"
+    },
+    "pedestrians_cyclists": {
+      "sidewalks": "present",
+      "crosswalks": "present",
+      "pedestrian_profile": "commuters"
+    },
+    "safety_disaster": {
+      "guardrails": "present",
+      "street_lighting": "present",
+      "disaster_prevention_signs": "absent",
+      "shoulder_pullouts": "absent"
+    },
+    "environment": {
+      "commercial_facilities": "present",
+      "schools": "unknown",
+      "green_space": "present",
+      "building_height": "low-rise"
+    },
+    "comfort": {
+      "greenery_cover": "present",
+      "benches": "present",
+      "wayfinding_signs": "present",
+      "monuments": "absent"
+    },
+    "deterioration": {
+      "pavement_marking_visibility": "clear",
+      "litter": "absent",
+      "pavement_damage": "none"
+    }
+  },
+  "free_description": "This road section functions as a local arterial, designed primarily for vehicular traffic (drivers and logistics) with significant provisions for pedestrians via sidewalks, crosswalks, and bus stops. Its structural characteristics offer moderate mobility efficiency for vehicles, regulated by traffic signals and a 30 km/h speed limit, appropriately balancing flow with pedestrian safety in a mixed-use residential and commercial environment. While greenery and bus stop benches enhance comfort, the dense network of overhead utility lines creates visual clutter, detracting from the streetscape's aesthetic quality. The absence of dedicated cycling infrastructure is a notable mismatch, potentially forcing cyclists to share the roadway or sidewalks, which impacts their safety and that of pedestrians. Overall, the road largely achieves its intended function for its target users, but the visual blight of utilities and the lack of cyclist provisions are areas of concern."
+}

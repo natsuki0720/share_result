@@ -1,0 +1,53 @@
+{
+  "images_path": "photos/video2/case22",
+  "road_image_analysis": {
+    "traffic_function": {
+      "lanes": 2,
+      "traffic_signals": "present",
+      "sign_types": [
+        "speed limit",
+        "directional",
+        "commercial",
+        "pedestrian crossing"
+      ],
+      "intersection_types": [
+        "cross intersection"
+      ],
+      "vehicle_types": [
+        "passenger car",
+        "motorcycle",
+        "logistics vehicle"
+      ],
+      "congestion_level": "light"
+    },
+    "pedestrians_cyclists": {
+      "sidewalks": "present",
+      "crosswalks": "present",
+      "pedestrian_profile": "unknown"
+    },
+    "safety_disaster": {
+      "guardrails": "absent",
+      "street_lighting": "present",
+      "disaster_prevention_signs": "absent",
+      "shoulder_pullouts": "absent"
+    },
+    "environment": {
+      "commercial_facilities": "present",
+      "schools": "absent",
+      "green_space": "present",
+      "building_height": "low-rise"
+    },
+    "comfort": {
+      "greenery_cover": "present",
+      "benches": "present",
+      "wayfinding_signs": "absent",
+      "monuments": "absent"
+    },
+    "deterioration": {
+      "pavement_marking_visibility": "clear",
+      "litter": "absent",
+      "pavement_damage": "none"
+    }
+  },
+  "free_description": "This road functions as a key arterial route connecting residential zones with local commercial facilities, primarily targeting drivers for efficient transit and local residents (pedestrians, cyclists) for access. Its two-lane structure, clear markings, and traffic signals support effective vehicular mobility. Pedestrian safety is addressed by sidewalks and crosswalks, though the shared-use nature of some paths might compromise cyclist safety. Visual comfort is mixed, with natural hillside views juxtaposed against dense utility lines. Street lighting is present, enhancing night-time safety. While the road effectively serves its intended purpose of facilitating movement and local access, there is a mismatch in prioritizing vehicular flow over dedicated, comfortable infrastructure for cyclists and an overall lack of aesthetic coherence due to overhead wires. The space holds social value as a vital everyday artery for the local community."
+}

@@ -1,0 +1,53 @@
+{
+  "images_path": "photos/video1/case1",
+  "road_image_analysis": {
+    "traffic_function": {
+      "lanes": 2,
+      "traffic_signals": "present",
+      "sign_types": [
+        "speed limit",
+        "directional",
+        "commercial",
+        "fire hydrant"
+      ],
+      "intersection_types": [
+        "cross intersection"
+      ],
+      "vehicle_types": [
+        "passenger car",
+        "truck",
+        "motorcycle"
+      ],
+      "congestion_level": "moderate"
+    },
+    "pedestrians_cyclists": {
+      "sidewalks": "present",
+      "crosswalks": "present",
+      "pedestrian_profile": "commuters"
+    },
+    "safety_disaster": {
+      "guardrails": "present",
+      "street_lighting": "present",
+      "disaster_prevention_signs": "present",
+      "shoulder_pullouts": "absent"
+    },
+    "environment": {
+      "commercial_facilities": "present",
+      "schools": "unknown",
+      "green_space": "present",
+      "building_height": "low-rise"
+    },
+    "comfort": {
+      "greenery_cover": "present",
+      "benches": "absent",
+      "wayfinding_signs": "present",
+      "monuments": "absent"
+    },
+    "deterioration": {
+      "pavement_marking_visibility": "clear",
+      "litter": "absent",
+      "pavement_damage": "none"
+    }
+  },
+  "free_description": "This road section is primarily intended for efficient vehicular movement, serving drivers of passenger cars, logistics vehicles, and motorcycles. Its structural characteristics offer high mobility efficiency for vehicles, supported by multiple lanes, clear pavement markings, and traffic signals. However, pedestrian and cyclist safety and comfort are compromised by narrow sidewalks, numerous utility poles, and visual clutter from overhead lines and abundant commercial signage. While the road effectively facilitates traffic flow, the dense visual information creates a busy and less comfortable environment for all users. The lack of dedicated shoulder pullouts also limits flexibility for emergencies. The space lacks distinct cultural or social value, functioning predominantly as a utilitarian transport and commercial corridor, with the visual environment detracting from overall aesthetic quality."
+}

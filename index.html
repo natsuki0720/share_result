@@ -1,0 +1,189 @@
+<!doctype html>
+<html lang="en">
+<head>
+  <meta charset="utf-8"/>
+  <meta name="viewport" content="width=device-width,initial-scale=1"/>
+  <title>Pages (EN / JA)</title>
+  <style>
+    :root{--bg:#0b0c0f;--card:#12141a;--muted:#9aa4b2;--text:#e6e9ef;--border:#1e2230}
+    *{box-sizing:border-box} html,body{height:100%}
+    body{margin:0;background:var(--bg);color:var(--text);font:14px/1.6 system-ui,-apple-system,Segoe UI,Roboto,Noto Sans,'Yu Gothic UI',sans-serif}
+    .container{max-width:1200px;margin:24px auto;padding:0 16px}
+    .header{display:flex;align-items:center;gap:12px;justify-content:space-between;flex-wrap:wrap;margin-bottom:12px}
+    .title{font-size:18px;font-weight:800;letter-spacing:.2px}
+    .muted{color:var(--muted)}
+    .grid{display:grid;grid-template-columns:1fr 1fr;gap:16px}
+    .card{background:var(--card);border:1px solid var(--border);border-radius:16px;padding:14px;min-height:60vh}
+    h2{margin:0 0 8px;font-size:16px}
+    details{margin:8px 0;border:1px solid #1b2030;border-radius:10px;overflow:hidden}
+    summary{cursor:pointer;padding:8px 10px;background:#0f1218;border-bottom:1px solid #181c28}
+    ul{list-style:none;margin:0;padding:8px 10px;display:grid;grid-template-columns:repeat(auto-fill,minmax(180px,1fr));gap:6px}
+    a{color:#9fd1ff;text-decoration:none} a:hover{text-decoration:underline}
+    .controls{display:flex;gap:8px;align-items:center}
+    .pill{display:inline-block;padding:4px 10px;border-radius:999px;border:1px solid #2a3240;background:#1a1f29;font-weight:700;font-size:12px;color:var(--text);text-decoration:none}
+    .small{font-size:12px}
+    @media (max-width:960px){.grid{grid-template-columns:1fr}}
+  </style>
+</head>
+<body>
+<div class="container">
+  <div class="header">
+    <div class="title">Generated Pages (EN / JA)</div>
+    <div class="controls small">
+      <span class="muted">Index of:</span>
+      <code>result/result_en/html</code> & <code>result/result_ja/html</code>
+      <a class="pill" href="./">Reload</a>
+    </div>
+  </div>
+
+  <div class="grid">
+    <!-- EN column -->
+    <section class="card">
+      <h2>English</h2>
+      <div id="en-status" class="small muted">Scanning…</div>
+      <div id="en-root"></div>
+    </section>
+
+    <!-- JA column -->
+    <section class="card">
+      <h2>日本語</h2>
+      <div id="ja-status" class="small muted">Scanning…</div>
+      <div id="ja-root"></div>
+    </section>
+  </div>
+
+  <p class="small muted" style="margin-top:10px">
+    ※ 動的探索は「video と case の規則名」を決め打ちで HEAD リクエストし、存在したものだけを表示します。
+  </p>
+</div>
+
+<script>
+/**
+ * 設定：video の範囲と case の上限（必要に応じて調整）
+ * 例：video1..3、case1..200 を探索
+ */
+const VIDEOS   = [1, 2, 3];
+const CASE_MAX = 50;
+
+// ルート（index.html からの相対パス）
+const EN_BASE = "result/result_en/html";
+const JA_BASE = "result/result_ja/html";
+
+// HEAD が使えない場合に GET をフォールバック（GitHub Pages は通常 HEAD OK）
+async function exists(url) {
+  try {
+    let res = await fetch(url, { method: "HEAD", cache: "no-store" });
+    if (res.ok) return true;
+    // 一部環境で HEAD が 403 などになるケースのフォールバック
+    res = await fetch(url, { method: "GET", cache: "no-store" });
+    return res.ok;
+  } catch (e) {
+    return false;
+  }
+}
+
+// 過負荷防止：同時並列を抑える簡易キュー
+async function pMapLimit(items, limit, mapper) {
+  const ret = [];
+  const executing = [];
+  for (const item of items) {
+    const p = Promise.resolve().then(() => mapper(item));
+    ret.push(p);
+    if (limit <= items.length) {
+      const e = p.then(() => executing.splice(executing.indexOf(e), 1));
+      executing.push(e);
+      if (executing.length >= limit) {
+        await Promise.race(executing);
+      }
+    }
+  }
+  return Promise.all(ret);
+}
+
+// videoX / caseY を列挙して存在チェック
+async function scanLang(baseRoot) {
+  const results = new Map(); // key: video, val: [{label, href}]
+  const tasks = [];
+
+  for (const v of VIDEOS) {
+    results.set(v, []);
+    for (let c = 1; c <= CASE_MAX; c++) {
+      const href = `${baseRoot}/video${v}/case${c}.html`;
+      tasks.push({ v, c, href });
+    }
+  }
+
+  // 並列 12 本くらいで十分（必要なら増減）
+  await pMapLimit(tasks, 12, async ({ v, c, href }) => {
+    if (await exists(href)) {
+      results.get(v).push({ label: `video${v}/case${c}`, href });
+    }
+  });
+
+  return results;
+}
+
+function renderResults(container, results) {
+  container.innerHTML = "";
+  let foundAny = false;
+
+  for (const v of VIDEOS) {
+    const items = results.get(v) || [];
+    const open = items.length <= 30; // 少ない video は最初から展開
+    const details = document.createElement("details");
+    if (open) details.open = true;
+    const summary = document.createElement("summary");
+    summary.textContent = `video${v} (${items.length})`;
+    details.appendChild(summary);
+
+    const ul = document.createElement("ul");
+    if (items.length === 0) {
+      const li = document.createElement("li");
+      li.className = "muted";
+      li.textContent = "No cases";
+      ul.appendChild(li);
+    } else {
+      foundAny = true;
+      for (const it of items) {
+        const li = document.createElement("li");
+        const a = document.createElement("a");
+        a.href = it.href;
+        a.textContent = it.label;
+        li.appendChild(a);
+        ul.appendChild(li);
+      }
+    }
+    details.appendChild(ul);
+    container.appendChild(details);
+  }
+
+  return foundAny;
+}
+
+(async () => {
+  const enRoot   = document.getElementById("en-root");
+  const jaRoot   = document.getElementById("ja-root");
+  const enStatus = document.getElementById("en-status");
+  const jaStatus = document.getElementById("ja-status");
+
+  // 英語
+  try {
+    const enResults = await scanLang(EN_BASE);
+    const ok = renderResults(enRoot, enResults);
+    enStatus.textContent = ok ? "Done." : "No pages found.";
+  } catch (e) {
+    enStatus.textContent = "Error while scanning.";
+  }
+
+  // 日本語
+  try {
+    const jaResults = await scanLang(JA_BASE);
+    const ok = renderResults(jaRoot, jaResults);
+    jaStatus.textContent = ok ? "完了" : "ページが見つかりませんでした";
+  } catch (e) {
+    jaStatus.textContent = "探索中にエラーが発生しました";
+  }
+})();
+</script>
+</body>
+</html>

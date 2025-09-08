@@ -1,0 +1,54 @@
+{
+  "images_path": "photos/video3/case4",
+  "road_image_analysis": {
+    "traffic_function": {
+      "lanes": 2,
+      "traffic_signals": "absent",
+      "sign_types": [
+        "directional",
+        "speed limit",
+        "no parking"
+      ],
+      "intersection_types": [
+        "cross intersection",
+        "T-intersection"
+      ],
+      "vehicle_types": [
+        "passenger car",
+        "truck",
+        "bus",
+        "logistics vehicle"
+      ],
+      "congestion_level": "light"
+    },
+    "pedestrians_cyclists": {
+      "sidewalks": "absent",
+      "crosswalks": "absent",
+      "pedestrian_profile": "commuters"
+    },
+    "safety_disaster": {
+      "guardrails": "present",
+      "street_lighting": "present",
+      "disaster_prevention_signs": "absent",
+      "shoulder_pullouts": "absent"
+    },
+    "environment": {
+      "commercial_facilities": "absent",
+      "schools": "absent",
+      "green_space": "present",
+      "building_height": "low-rise"
+    },
+    "comfort": {
+      "greenery_cover": "present",
+      "benches": "absent",
+      "wayfinding_signs": "present",
+      "monuments": "absent"
+    },
+    "deterioration": {
+      "pavement_marking_visibility": "clear",
+      "litter": "present",
+      "pavement_damage": "cracks"
+    }
+  },
+  "free_description": "This road section is primarily designed for vehicular traffic, acting as a functional arterial road for drivers, including logistics vehicles and buses, to navigate complex junctions. Its multi-lane structure and clear directional signage ensure high mobility efficiency for drivers, while guardrails and street lighting contribute to vehicular safety. However, the significant weakness lies in its neglect of pedestrians; dedicated sidewalks and crosswalks are largely absent or unmaintained, despite the presence of a bus stop indicating commuter use. This creates a safety and comfort deficit for non-drivers forced to share space or navigate unkempt shoulders. While spatial elements like directional signs and pavement markings effectively serve drivers, the overall lack of pedestrian infrastructure and some visible litter/weeds on the periphery highlight a mismatch between the road's vehicle-centric design intent and the real-world needs of all potential users, resulting in an uninclusive environment. The area is primarily utilitarian, lacking significant cultural or social value beyond its transport function."
+}

@@ -1,0 +1,53 @@
+{
+  "images_path": "photos/video3/case1",
+  "road_image_analysis": {
+    "traffic_function": {
+      "lanes": 2,
+      "traffic_signals": "present",
+      "sign_types": [
+        "curve warning",
+        "bus stop",
+        "bicycle parking",
+        "street name"
+      ],
+      "intersection_types": [
+        "T-intersection"
+      ],
+      "vehicle_types": [
+        "passenger car",
+        "truck",
+        "bus"
+      ],
+      "congestion_level": "light"
+    },
+    "pedestrians_cyclists": {
+      "sidewalks": "present",
+      "crosswalks": "present",
+      "pedestrian_profile": "unknown"
+    },
+    "safety_disaster": {
+      "guardrails": "present",
+      "street_lighting": "present",
+      "disaster_prevention_signs": "absent",
+      "shoulder_pullouts": "absent"
+    },
+    "environment": {
+      "commercial_facilities": "absent",
+      "schools": "present",
+      "green_space": "present",
+      "building_height": "mid-rise"
+    },
+    "comfort": {
+      "greenery_cover": "present",
+      "benches": "present",
+      "wayfinding_signs": "present",
+      "monuments": "absent"
+    },
+    "deterioration": {
+      "pavement_marking_visibility": "clear",
+      "litter": "absent",
+      "pavement_damage": "none"
+    }
+  },
+  "free_description": "This road functions as a local arterial, primarily serving vehicular traffic, including buses, and local pedestrians. Its design prioritizes balanced mobility and safety: two lanes, traffic signals, and clear markings facilitate vehicle flow, while guardrails, sidewalks, and crosswalks enhance safety for both drivers and pedestrians. Abundant green space and bus stops with benches contribute to comfort, catering to local residents and bus users. A nearby sports field suggests community and recreational value. Spatial elements like signs and guardrails are appropriately placed and well-maintained, indicating strong functional alignment with its role as an integrated local connector. The road effectively serves its target users and supports the surrounding residential and recreational environment."
+}

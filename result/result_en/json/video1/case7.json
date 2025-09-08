@@ -1,0 +1,52 @@
+{
+  "images_path": "photos/video1/case7",
+  "road_image_analysis": {
+    "traffic_function": {
+      "lanes": 2,
+      "traffic_signals": "present",
+      "sign_types": [
+        "speed limit",
+        "pedestrian crossing",
+        "no parking/stopping"
+      ],
+      "intersection_types": [
+        "cross intersection"
+      ],
+      "vehicle_types": [
+        "passenger car",
+        "truck",
+        "motorcycle"
+      ],
+      "congestion_level": "light"
+    },
+    "pedestrians_cyclists": {
+      "sidewalks": "present",
+      "crosswalks": "present",
+      "pedestrian_profile": "unknown"
+    },
+    "safety_disaster": {
+      "guardrails": "present",
+      "street_lighting": "present",
+      "disaster_prevention_signs": "absent",
+      "shoulder_pullouts": "absent"
+    },
+    "environment": {
+      "commercial_facilities": "present",
+      "schools": "absent",
+      "green_space": "present",
+      "building_height": "mid-rise"
+    },
+    "comfort": {
+      "greenery_cover": "present",
+      "benches": "absent",
+      "wayfinding_signs": "absent",
+      "monuments": "absent"
+    },
+    "deterioration": {
+      "pavement_marking_visibility": "clear",
+      "litter": "absent",
+      "pavement_damage": "none"
+    }
+  },
+  "free_description": "This road section is designed as a local arterial or collector, balancing vehicular flow with pedestrian access in a residential-commercial area. Its primary target users are drivers and pedestrians. Mobility efficiency is good for drivers, with clear two-lane traffic and signals. Pedestrian safety is addressed by crosswalks and sidewalks, though some sidewalks are narrow. Street lighting and guardrails enhance general safety. The presence of greenery contributes to visual comfort, but overhead utility lines detract from the aesthetic quality. The road effectively serves its function of facilitating local movement, aligning well with the residential and commercial surroundings. It functions as an everyday thoroughfare, supporting community life, though specific cultural or historical values are not immediately apparent."
+}

@@ -1,0 +1,51 @@
+{
+  "images_path": "photos/video3/case2",
+  "road_image_analysis": {
+    "traffic_function": {
+      "lanes": 2,
+      "traffic_signals": "absent",
+      "sign_types": [
+        "curve warning sign",
+        "speed limit sign"
+      ],
+      "intersection_types": [
+        "other"
+      ],
+      "vehicle_types": [
+        "passenger car",
+        "truck",
+        "bus"
+      ],
+      "congestion_level": "moderate"
+    },
+    "pedestrians_cyclists": {
+      "sidewalks": "absent",
+      "crosswalks": "absent",
+      "pedestrian_profile": "unknown"
+    },
+    "safety_disaster": {
+      "guardrails": "present",
+      "street_lighting": "present",
+      "disaster_prevention_signs": "absent",
+      "shoulder_pullouts": "absent"
+    },
+    "environment": {
+      "commercial_facilities": "absent",
+      "schools": "present",
+      "green_space": "present",
+      "building_height": "low-rise"
+    },
+    "comfort": {
+      "greenery_cover": "present",
+      "benches": "absent",
+      "wayfinding_signs": "absent",
+      "monuments": "absent"
+    },
+    "deterioration": {
+      "pavement_marking_visibility": "clear",
+      "litter": "absent",
+      "pavement_damage": "none"
+    }
+  },
+  "free_description": "This road functions as a local access route connecting residential areas and a school, serving as a bus route. Primary target users are drivers, including residents, logistics, and public transport, with an implicit expectation for local pedestrians and cyclists. For drivers, mobility is efficient for local access, but the narrow, winding two-lane structure, especially with large vehicles, causes slowdowns and safety concerns due to limited visibility on curves. The absence of dedicated sidewalks creates significant safety weaknesses for pedestrians and cyclists, who are realistically present despite being non-target users by design. Overhead utility lines detract from visual comfort, though abundant greenery is a positive. The guardrails and curve signs address specific hazards but fail to create a comprehensively safe environment for mixed traffic. The 30 km/h speed limit is appropriate but not inherently enforced by the road's physical design. The road effectively serves its local and public transport function, yet its narrowness and lack of pedestrian infrastructure represent a mismatch with the diverse demands of a residential and school-adjacent area. This road holds cultural value as a typical, essential local connector, integral to daily community life."
+}

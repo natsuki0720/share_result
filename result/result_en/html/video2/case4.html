@@ -1,0 +1,95 @@
+<!doctype html>
+<html lang="en"><head><meta charset="utf-8"/><meta name="viewport" content="width=device-width,initial-scale=1"/>
+<title>Video 2 Case 4</title><style>
+:root{--bg:#0b0c0f;--card:#12141a;--muted:#9aa4b2;--text:#e6e9ef;--border:#1e2230}
+*{box-sizing:border-box} html,body{height:100%}
+body{margin:0;background:var(--bg);color:var(--text);font:14px/1.65 system-ui,-apple-system,Segoe UI,Roboto,Noto Sans,'Yu Gothic UI',sans-serif}
+.container{max-width:1000px;margin:24px auto;padding:0 16px}
+.header{display:flex;align-items:center;justify-content:space-between;margin-bottom:12px;gap:12px;flex-wrap:wrap}
+.h1{font-weight:800;font-size:20px;letter-spacing:.2px}
+.meta{color:var(--muted);font-size:12px}
+.lang-switch{display:flex;align-items:center;gap:8px}
+.pill{display:inline-block;padding:4px 10px;border-radius:999px;border:1px solid #2a3240;background:#1a1f29;font-weight:700;font-size:12px;color:var(--text);text-decoration:none}
+.card{background:var(--card);border:1px solid var(--border);border-radius:16px;padding:14px}
+.gallery{display:grid;gap:10px;grid-template-columns:repeat(4,minmax(0,1fr))}
+.thumb{position:relative;border-radius:12px;overflow:hidden;border:1px solid #22293a;background:#0e1117;aspect-ratio:4/3;display:grid;place-items:center}
+.thumb img{width:100%;height:100%;object-fit:cover;display:block}
+.thumb .cap{position:absolute;left:8px;bottom:8px;font-size:12px;background:rgba(0,0,0,.45);padding:2px 6px;border-radius:8px}
+.section-title{margin:0 0 8px;font-size:15px;font-weight:700}
+.kv-table{display:grid;gap:6px}
+.kv-row{display:grid;grid-template-columns:180px 1fr;gap:8px;padding:6px 8px;border:1px solid #161a24;border-radius:10px;background:#0f1218}
+.kv-row .k{color:var(--muted)} .kv-row .v{white-space:pre-wrap}
+.desc{white-space:pre-wrap}
+.footer{margin-top:14px;color:var(--muted);font-size:12px;text-align:center}
+@media (max-width:960px){.gallery{grid-template-columns:repeat(2,minmax(0,1fr))}.kv-row{grid-template-columns:120px 1fr}}
+@media print{body{background:#fff;color:#000}.card{border-color:#ddd}.thumb{border-color:#ddd}}
+</style></head>
+<body><div class="container">
+  <div class="header">
+    <div class="h1">Video 2 Case 4</div>
+    <div class="meta">generated: 2025-09-08 14:10</div>
+    <div class="lang-switch"><a class="pill" href="../../../../index.html">Index</a></div>
+    <div class="lang-switch"><span class="muted">Language:</span><a class="pill" href="case4.html">EN</a><a class="pill" href="../../../result_ja/html/video2/case4.html">JA</a></div>
+  </div>
+
+  <section class="card">
+    <div class="section-title">Images</div>
+    <div class="gallery"><div class="thumb"><img src="../../../../photos/video2/case4/frame_2399.jpg" alt=""><div class="cap">frame_2399.jpg</div></div>
+<div class="thumb"><img src="../../../../photos/video2/case4/frame_2465.jpg" alt=""><div class="cap">frame_2465.jpg</div></div>
+<div class="thumb"><img src="../../../../photos/video2/case4/frame_2532.jpg" alt=""><div class="cap">frame_2532.jpg</div></div>
+<div class="thumb"><img src="../../../../photos/video2/case4/frame_2598.jpg" alt=""><div class="cap">frame_2598.jpg</div></div></div>
+  </section>
+
+  <section class="card">
+    <div class="section-title">Description</div>
+    <div class="desc">This road section functions as a local arterial, designed primarily for vehicular traffic (drivers and logistics) with significant provisions for pedestrians via sidewalks, crosswalks, and bus stops. Its structural characteristics offer moderate mobility efficiency for vehicles, regulated by traffic signals and a 30 km/h speed limit, appropriately balancing flow with pedestrian safety in a mixed-use residential and commercial environment. While greenery and bus stop benches enhance comfort, the dense network of overhead utility lines creates visual clutter, detracting from the streetscape's aesthetic quality. The absence of dedicated cycling infrastructure is a notable mismatch, potentially forcing cyclists to share the roadway or sidewalks, which impacts their safety and that of pedestrians. Overall, the road largely achieves its intended function for its target users, but the visual blight of utilities and the lack of cyclist provisions are areas of concern.</div>
+  </section>
+
+  <section class="card">
+    <div class="section-title">Structured Output (image_analysis)</div>
+    <h3>Traffic Function</h3>
+<div class="kv-table">
+<div class="kv-row"><div class="k">lanes</div><div class="v">2</div></div>
+<div class="kv-row"><div class="k">traffic signals</div><div class="v">present</div></div>
+<div class="kv-row"><div class="k">sign types</div><div class="v">speed limit, no parking, bus stop, direction sign</div></div>
+<div class="kv-row"><div class="k">intersection types</div><div class="v">cross intersection</div></div>
+<div class="kv-row"><div class="k">vehicle types</div><div class="v">passenger car, logistics vehicle</div></div>
+<div class="kv-row"><div class="k">congestion level</div><div class="v">light</div></div>
+</div>
+<h3>Pedestrians Cyclists</h3>
+<div class="kv-table">
+<div class="kv-row"><div class="k">sidewalks</div><div class="v">present</div></div>
+<div class="kv-row"><div class="k">crosswalks</div><div class="v">present</div></div>
+<div class="kv-row"><div class="k">pedestrian profile</div><div class="v">commuters</div></div>
+</div>
+<h3>Safety Disaster</h3>
+<div class="kv-table">
+<div class="kv-row"><div class="k">guardrails</div><div class="v">present</div></div>
+<div class="kv-row"><div class="k">street lighting</div><div class="v">present</div></div>
+<div class="kv-row"><div class="k">disaster prevention signs</div><div class="v">absent</div></div>
+<div class="kv-row"><div class="k">shoulder pullouts</div><div class="v">absent</div></div>
+</div>
+<h3>Environment</h3>
+<div class="kv-table">
+<div class="kv-row"><div class="k">commercial facilities</div><div class="v">present</div></div>
+<div class="kv-row"><div class="k">schools</div><div class="v">unknown</div></div>
+<div class="kv-row"><div class="k">green space</div><div class="v">present</div></div>
+<div class="kv-row"><div class="k">building height</div><div class="v">low-rise</div></div>
+</div>
+<h3>Comfort</h3>
+<div class="kv-table">
+<div class="kv-row"><div class="k">greenery cover</div><div class="v">present</div></div>
+<div class="kv-row"><div class="k">benches</div><div class="v">present</div></div>
+<div class="kv-row"><div class="k">wayfinding signs</div><div class="v">present</div></div>
+<div class="kv-row"><div class="k">monuments</div><div class="v">absent</div></div>
+</div>
+<h3>Deterioration</h3>
+<div class="kv-table">
+<div class="kv-row"><div class="k">pavement marking visibility</div><div class="v">clear</div></div>
+<div class="kv-row"><div class="k">litter</div><div class="v">absent</div></div>
+<div class="kv-row"><div class="k">pavement damage</div><div class="v">none</div></div>
+</div>
+  </section>
+
+  <div class="footer">auto-generated</div>
+</div></body></html>

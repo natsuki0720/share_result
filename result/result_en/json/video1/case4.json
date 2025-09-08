@@ -1,0 +1,54 @@
+{
+  "images_path": "photos/video1/case4",
+  "road_image_analysis": {
+    "traffic_function": {
+      "lanes": 4,
+      "traffic_signals": "present",
+      "sign_types": [
+        "speed limit",
+        "no entry",
+        "directional",
+        "commercial"
+      ],
+      "intersection_types": [
+        "cross intersection"
+      ],
+      "vehicle_types": [
+        "passenger car",
+        "truck",
+        "motorcycle",
+        "bicycle"
+      ],
+      "congestion_level": "light"
+    },
+    "pedestrians_cyclists": {
+      "sidewalks": "present",
+      "crosswalks": "present",
+      "pedestrian_profile": "unknown"
+    },
+    "safety_disaster": {
+      "guardrails": "present",
+      "street_lighting": "present",
+      "disaster_prevention_signs": "absent",
+      "shoulder_pullouts": "absent"
+    },
+    "environment": {
+      "commercial_facilities": "present",
+      "schools": "absent",
+      "green_space": "present",
+      "building_height": "low-rise"
+    },
+    "comfort": {
+      "greenery_cover": "present",
+      "benches": "absent",
+      "wayfinding_signs": "present",
+      "monuments": "absent"
+    },
+    "deterioration": {
+      "pavement_marking_visibility": "clear",
+      "litter": "absent",
+      "pavement_damage": "none"
+    }
+  },
+  "free_description": "This road primarily functions as a vehicular thoroughfare connecting commercial and residential zones, with drivers as the main target users. Its multi-lane structure and clear markings ensure efficient mobility for vehicles. Safety for pedestrians is addressed with sidewalks and crosswalks, complemented by guardrails in some sections. While street trees provide visual comfort, the dense network of overhead utility lines and abundant commercial signage creates significant visual clutter, potentially distracting drivers and diminishing the urban aesthetic. This visual noise represents a mismatch between the road's intended functional clarity and its current real-world appearance, impacting overall spatial quality. The area lacks notable cultural or social distinctiveness beyond its everyday commercial utility."
+}

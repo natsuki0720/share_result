@@ -1,0 +1,52 @@
+{
+  "images_path": "photos/video2/case14",
+  "road_image_analysis": {
+    "traffic_function": {
+      "lanes": 4,
+      "traffic_signals": "present",
+      "sign_types": [
+        "directional",
+        "regulatory",
+        "commercial"
+      ],
+      "intersection_types": [
+        "cross intersection"
+      ],
+      "vehicle_types": [
+        "passenger car",
+        "bicycle",
+        "logistics vehicle"
+      ],
+      "congestion_level": "moderate"
+    },
+    "pedestrians_cyclists": {
+      "sidewalks": "present",
+      "crosswalks": "present",
+      "pedestrian_profile": "unknown"
+    },
+    "safety_disaster": {
+      "guardrails": "present",
+      "street_lighting": "present",
+      "disaster_prevention_signs": "absent",
+      "shoulder_pullouts": "absent"
+    },
+    "environment": {
+      "commercial_facilities": "present",
+      "schools": "absent",
+      "green_space": "present",
+      "building_height": "low-rise"
+    },
+    "comfort": {
+      "greenery_cover": "present",
+      "benches": "absent",
+      "wayfinding_signs": "present",
+      "monuments": "absent"
+    },
+    "deterioration": {
+      "pavement_marking_visibility": "clear",
+      "litter": "absent",
+      "pavement_damage": "none"
+    }
+  },
+  "free_description": "This road section functions as a key urban arterial, prioritizing efficient vehicular flow to and from major stations, while also accommodating local commercial access, pedestrians, and cyclists. Its structural strengths lie in clear lane delineation, traffic signals for drivers, and dedicated sidewalks and crosswalks for pedestrian safety. Ample street trees and green spaces enhance visual comfort. However, the numerous utility poles and overhead wires create visual clutter, detracting from the overall aesthetic. The road generally aligns with its design intent, balancing mobility efficiency for drivers with the needs of local users in a commercial-residential setting. The presence of various shops suggests a vibrant community hub, contributing to its social value."
+}

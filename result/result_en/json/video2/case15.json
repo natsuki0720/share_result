@@ -1,0 +1,54 @@
+{
+  "images_path": "photos/video2/case15",
+  "road_image_analysis": {
+    "traffic_function": {
+      "lanes": 2,
+      "traffic_signals": "present",
+      "sign_types": [
+        "traffic signs",
+        "commercial signs"
+      ],
+      "intersection_types": [
+        "cross intersection"
+      ],
+      "vehicle_types": [
+        "passenger car",
+        "truck",
+        "bus",
+        "motorcycle",
+        "bicycle",
+        "logistics vehicle"
+      ],
+      "congestion_level": "light"
+    },
+    "pedestrians_cyclists": {
+      "sidewalks": "present",
+      "crosswalks": "present",
+      "pedestrian_profile": "commuters"
+    },
+    "safety_disaster": {
+      "guardrails": "present",
+      "street_lighting": "present",
+      "disaster_prevention_signs": "absent",
+      "shoulder_pullouts": "absent"
+    },
+    "environment": {
+      "commercial_facilities": "present",
+      "schools": "unknown",
+      "green_space": "present",
+      "building_height": "low-rise"
+    },
+    "comfort": {
+      "greenery_cover": "present",
+      "benches": "absent",
+      "wayfinding_signs": "absent",
+      "monuments": "absent"
+    },
+    "deterioration": {
+      "pavement_marking_visibility": "clear",
+      "litter": "absent",
+      "pavement_damage": "none"
+    }
+  },
+  "free_description": "This road section functions as a critical arterial connecting commercial and residential areas, primarily prioritizing vehicular traffic flow. Drivers benefit from efficient mobility due to multiple lanes and traffic signals. While crosswalks and sidewalks exist, the design inadequately supports pedestrians and cyclists who are clearly present, leading to potential safety and comfort compromises for these active transport users. Spatial elements like clear pavement markings and guardrails are functional, but overhead wiring detracts from visual comfort. The road effectively serves its car-centric purpose but shows a mismatch in fully accommodating multimodal transport needs essential for a local commercial hub."
+}

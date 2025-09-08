@@ -1,0 +1,52 @@
+{
+  "images_path": "photos/video2/case11",
+  "road_image_analysis": {
+    "traffic_function": {
+      "lanes": 2,
+      "traffic_signals": "absent",
+      "sign_types": [
+        "speed limit",
+        "no stopping",
+        "pedestrian crossing",
+        "stop sign"
+      ],
+      "intersection_types": [
+        "T-intersection"
+      ],
+      "vehicle_types": [
+        "passenger car",
+        "logistics vehicle"
+      ],
+      "congestion_level": "light"
+    },
+    "pedestrians_cyclists": {
+      "sidewalks": "present",
+      "crosswalks": "present",
+      "pedestrian_profile": "unknown"
+    },
+    "safety_disaster": {
+      "guardrails": "absent",
+      "street_lighting": "present",
+      "disaster_prevention_signs": "absent",
+      "shoulder_pullouts": "absent"
+    },
+    "environment": {
+      "commercial_facilities": "present",
+      "schools": "absent",
+      "green_space": "present",
+      "building_height": "low-rise"
+    },
+    "comfort": {
+      "greenery_cover": "present",
+      "benches": "absent",
+      "wayfinding_signs": "absent",
+      "monuments": "absent"
+    },
+    "deterioration": {
+      "pavement_marking_visibility": "clear",
+      "litter": "absent",
+      "pavement_damage": "none"
+    }
+  },
+  "free_description": "This road section is designed as a local residential artery, balancing mobility for drivers with the needs of pedestrians and cyclists. Its primary target users are local residents, commuters, and those accessing nearby commercial facilities. Structurally, the prominent tree canopy provides high visual comfort and shade, effectively encouraging slower, appropriate driving speeds (40km/h) for a residential zone. Sidewalks and clear crosswalks enhance pedestrian safety and connectivity to local amenities like the convenience store. However, the absence of dedicated cycling infrastructure means cyclists must share lanes with vehicles, compromising their safety. The narrow shoulders limit flexibility for vehicle pull-outs. While the street trees are a significant aesthetic asset, the numerous utility poles create visual clutter. The road effectively achieves its core function as a green, locally-focused thoroughfare, fostering a pleasant environment. The tree-lined aspect likely contributes to local scenic value and a sense of community identity, serving as a familiar and well-used route for daily activities."
+}

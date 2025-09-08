@@ -1,0 +1,52 @@
+{
+  "images_path": "photos/video2/case30",
+  "road_image_analysis": {
+    "traffic_function": {
+      "lanes": 1,
+      "traffic_signals": "absent",
+      "sign_types": [
+        "warning sign",
+        "convex mirror"
+      ],
+      "intersection_types": [
+        "other"
+      ],
+      "vehicle_types": [
+        "passenger car",
+        "logistics vehicle",
+        "bicycle",
+        "motorcycle"
+      ],
+      "congestion_level": "light"
+    },
+    "pedestrians_cyclists": {
+      "sidewalks": "absent",
+      "crosswalks": "absent",
+      "pedestrian_profile": "commuters"
+    },
+    "safety_disaster": {
+      "guardrails": "present",
+      "street_lighting": "absent",
+      "disaster_prevention_signs": "absent",
+      "shoulder_pullouts": "absent"
+    },
+    "environment": {
+      "commercial_facilities": "absent",
+      "schools": "absent",
+      "green_space": "present",
+      "building_height": "low-rise"
+    },
+    "comfort": {
+      "greenery_cover": "present",
+      "benches": "absent",
+      "wayfinding_signs": "absent",
+      "monuments": "absent"
+    },
+    "deterioration": {
+      "pavement_marking_visibility": "clear",
+      "litter": "absent",
+      "pavement_damage": "none"
+    }
+  },
+  "free_description": "This road segment is primarily designed for low-speed vehicular access to a residential area, with drivers as the target users. Its narrow, single-lane appearance supports local mobility but limits traffic volume and speed. While efficient for residential vehicle access, safety for pedestrians and cyclists is a significant weakness due to the complete absence of sidewalks and crosswalks, forcing them to share the roadway. The presence of guardrails enhances safety on one side, and a convex mirror aids visibility on curves. The environment, characterized by tall concrete retaining walls and residential buildings, provides limited visual comfort despite some natural greenery. Overgrown vegetation, while contributing to greening, also suggests a lack of consistent maintenance. Functionally, the road adequately serves its primary purpose of connecting residents by car. However, the design exhibits a mismatch with real-world usage where pedestrians and cyclists are inevitably present. This lack of dedicated infrastructure for non-vehicular users compromises their safety and comfort, creating a less inclusive environment within a residential context. The space lacks significant cultural or social value, primarily serving a utilitarian access role."
+}
